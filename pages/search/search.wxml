@@ -1,0 +1,12 @@
+<view class="map_container">
+   <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap">
+   </map>
+</view>
+<view class="weui-cells weui-cells_after-title">
+   <block wx:for="{{markers}}" wx:for-item="item" wx:key="*this">
+      <navigator data-index="{{index}}" url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap='clickListItem'>
+         <view class="weui-cell__bd">{{markers[index].title}}</view>
+         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+   </block>
+</view>
